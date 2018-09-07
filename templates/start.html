@@ -1,16 +1,36 @@
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    </head>
-    <body>
-        <h1>Wgraj plik</h1>
-        <form action="/upload" enctype="multipart/form-data" method="post">
-            <label>Tytuł pliku</label>
-            <input type="text" name="title">
-            <br>
-            <label>Plik</label>
-            <input type="file" name="upload" multiple="multiple"><br>
-            <input type="submit" value="Wyślij">
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        input[type="text"] {background-color: rgb(221, 220, 220); border: none; height: 30px; margin-bottom: 20px; margin-left: 20px; border-radius: 3px; color: rgb(116, 114, 114);
+            padding: 5px 0; font-size: 1em; text-align: center;}
+        input[type="file"]::-webkit-file-upload-button { border: none; background-color: rgb(136, 204, 28); height: 30px; width: 100px; cursor: pointer; border-radius: 3px; color: #fff; font-size: 1em;}
+        input[type="submit"]{background-color: rgb(136, 204, 28); border: none; height: 30px; width: 100px; margin: 20px 0 0 55px; color: #fff; font-size: 1em; cursor: pointer; border-radius: 3px;}
+        input[type="file"]{ min-width: 300px; padding: 5px; border-radius: 3px; background-color: rgb(221, 220, 220); color: rgb(116, 114, 114); font-size: 1em; margin-left: 20px;}
+        h1 {color:cadetblue; text-align: left; margin-left: 50px;}
+        form { padding: 20px; background-color: honeydew; border-radius: 3px; width: 50%;}
+        label {color: rgb(23, 122, 81); font-size: 1.1em;}
+        img { width: 200px; height: 200px;}
+    </style>
+</head>
+
+<body>
+    <h1>Wgraj plik</h1>
+    <form action="/upload" enctype="multipart/form-data" method="post">
+        <label>Tytuł pliku</label>
+        <input type="text" name="title">
+        <br>
+        <label>Plik</label>
+        <input type="file" name="upload" multiple="multiple"><br>
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+
+
 </html>

@@ -8,7 +8,7 @@ exports.upload = function(request, response) {
         fs.renameSync(files.upload.path, "test.png");
         response.writeHead(200, {"Content-Type": "text/html"});
         response.write("received image:<br/>");
-        response.write("<img src='/show' />");
+        response.write("<img src='/show' / width='50%' height='50%'>");
         response.end();
     });
 }
@@ -32,11 +32,12 @@ exports.welcome = function(request, response) {
         response.write(html);
         response.end();
     });
+
 }
 
 exports.show = function(request, response) {
     fs.readFile("test.png", "binary", function(error, file) {
-        response.writeHead(200, {"Content-Type": "image/jpg"});
+        response.writeHead(200, {"Content-Type": "image/png"});
         response.write(file, "binary");
         response.end();
     });
